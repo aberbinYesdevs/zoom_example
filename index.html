@@ -11,6 +11,12 @@
         position: relative;
       }
 
+      .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
       .img-zoom-lens {
         position: absolute;
         border: 1px solid #d4d4d4;
@@ -23,7 +29,8 @@
         border: 1px solid #d4d4d4;
         /*set the size of the result div:*/
         width: 300px;
-        height: 300px;
+        height: 240px;
+        margin-left: 50px;
       }
 
       figure.zoom {
@@ -32,6 +39,7 @@
         width: 500px;
         overflow: hidden;
         cursor: zoom-in;
+        margin: auto;
       }
 
       figure.zoom img {
@@ -112,15 +120,19 @@
 
     <p>Zoom on other box</p>
 
-    <div class="img-zoom-container">
-      <img
-        id="myimage"
-        src="https://media-exp1.licdn.com/dms/image/C4E1BAQG2B8qz3t6Lpg/company-background_10000/0/1623769321410?e=2147483647&v=beta&t=XKJ9tOV7LtIDi8rcCrNDkrRJC8IfQGj395fCGHP8Vr8"
-        width="300"
-        height="240"
-      />
+    <div class="container">
+      <div class="img-zoom-container">
+        <img
+          id="myimage"
+          src="https://media-exp1.licdn.com/dms/image/C4E1BAQG2B8qz3t6Lpg/company-background_10000/0/1623769321410?e=2147483647&v=beta&t=XKJ9tOV7LtIDi8rcCrNDkrRJC8IfQGj395fCGHP8Vr8"
+          width="300"
+          height="240"
+        />
+      </div>
       <div id="myresult" class="img-zoom-result"></div>
     </div>
+
+    <p style="margin-top: 200px;">Zoom on same image box</p>
 
     <figure
       class="zoom"
